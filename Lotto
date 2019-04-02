@@ -1,0 +1,150 @@
+package syj;
+ // 로또 번호 생성기 (!!!!서로 다른!!!!! 난수 6개 출력)
+
+public class Study {
+	public static void main(String[] args) {
+	
+  
+  
+  
+  (1)
+  
+  class LottoGenerator{
+	LottoGenerator(){}
+	int [] ball = new int[45]; //45개의 정수가 저장되는 배열
+	void init() {//1단계 메서드
+		
+	}
+	void shuffle() {//2단계 메서드
+		
+	}
+	void show() {//3단계 메서드
+	
+	}
+	
+	}
+  
+  
+  (2)
+  	void init() {//1단계 메서드
+		for(;;) {//45회 반복
+		
+		
+		}
+		}
+    
+    
+    
+    (3)
+    
+    
+class LottoGenerator{
+	LottoGenerator(){}
+	int [] ball = new int[45]; //45개의 정수가 저장되는 배열
+	void init() {//1단계 메서드
+		for(int num=0; num<45; num++) {//45회 반복
+			ball[num] = num+1;
+			}//end of for 
+		}
+	void shuffle() {//2단계 메서드
+		
+	}
+	void show() {//3단계 메서드
+	
+	}
+	
+	}
+  
+  
+  
+  (4)
+  // 난수를 구한다. (0~ 44)
+  // 난수번쨰 공과 첫번째 공을 바꾼다. 
+  
+  위의 두가지를 500회 반복. 
+  
+  
+  
+  (5)
+  
+  
+  
+class LottoGenerator{
+	LottoGenerator(){}
+	int [] ball = new int[45]; //45개의 정수가 저장되는 배열
+	void init() {//1단계 메서드
+		for(int num=0; num<45; num++) {//45회 반복
+			ball[num] = num+1;
+			}//end of for 
+		}
+	void shuffle() {//2단계 메서드
+		//난수번째 공 (0~44)과 첫번째 공을 바꾼다. 이 작업을 500번 반복한다.
+		for (int i=0; i<500; i++) {
+			int rnd=(int)(Math.random()*45);
+			int temp = ball[0];//첫번째 공의 
+			ball[0] = ball[rnd];//난수번째의 공의 번호를 첫번째공으로 옮김
+			ball[rnd] =  temp; //임시 저장소의 번호를 난수번째 공으로 옮김
+		}//500회 반복
+		
+	}
+  
+  
+  
+  
+  
+  
+  
+  
+  (6)
+  
+  class LottoGenerator{
+	LottoGenerator(){}
+	int [] ball = new int[45]; //45개의 정수가 저장되는 배열
+	void init() {//1단계 메서드
+		for(int num=0; num<45; num++) {//45회 반복
+			ball[num] = num+1;
+			}//end of for 
+		}
+	void shuffle() {//2단계 메서드
+		//난수번째 공 (0~44)과 첫번째 공을 바꾼다. 이 작업을 500번 반복한다.
+		for (int i=0; i<500; i++) {
+			int rnd=(int)(Math.random()*45);
+			int temp = ball[0];//첫번째 공의 
+			ball[0] = ball[rnd];//난수번째의 공의 번호를 첫번째공으로 옮김
+			ball[rnd] =  temp; //임시 저장소의 번호를 난수번째 공으로 옮김
+		}//500회 반복
+		
+	}
+	void show() {//3단계 메서드
+	//앞에서 6개를 출력
+		System.out.println("로또번호 6개");
+		for (int i=0; i<6; i++) {
+			System.out.println(ball[i]+" ");
+			
+		}
+	System.out.println();
+	}
+	
+	
+	}
+
+
+  
+  
+  
+  
+  
+  
+  (7)
+  
+  
+  public class Study {
+	public static void main(String[] args) {	
+		
+		LottoGenerator l = new LottoGenerator();
+		l.init(); l.shuffle(); l.show();
+  
+  
+  
+ 
+  
