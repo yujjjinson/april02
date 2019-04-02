@@ -1,0 +1,29 @@
+package syj;
+
+
+public class Study {
+public static void main(String[] args) {
+  Pachingko pachingko = new Pachingko();
+	pachingko.rolling();
+		
+
+	}
+}
+class Pachingko{
+	Pachingko(){}
+	
+	String[] shapes = {"◆","♠","♥","♣"};
+	void rolling() {
+		int r1 = (int)(Math.random()*4);//0부터 3까지 난수
+		int r2 = (int)(Math.random()*4);//0부터 3까지 난수
+		int r3 = (int)(Math.random()*4);//0부터 3까지 난수
+		int r4 = (int)(Math.random()*4);//0부터 3까지 난수
+		System.out.println(shapes[r1]+","+shapes[r2]+","+shapes[r3]+","+shapes[r4]);
+		if((r1==r2)&&(r1==r3)&&(r1==r4)) {
+			System.out.println("빙고!");
+		}else {
+			System.out.println("다음기회에~ ");
+		}
+		
+	}
+}
